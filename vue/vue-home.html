@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Vue Play Ground
+    </title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+<body>
+    
+   <div id="app">
+        <h1>{{ header }}</h1>
+       <div class="copy">
+            {{ body }}
+       </div>
+       <span v-bind:title="directive">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span>
+       
+       
+       
+       <div class="class-test">
+           <p>{{ reverseM }}</p>
+           <button v-on:click="reversetext">Reverse Text</button>
+       </div>
+       
+       <div>
+           <p>{{ twoWayBind }}</p>
+           <input v-model="twoWayBind"><br><br>
+           
+            <span v-if="visible">Display if TRUE!</span>
+       </div>
+       <div>
+          <ol>
+            <li v-for="list in lists">
+              {{ list.text }}
+            </li>
+          </ol>
+       </div>
+   </div>
+
+
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
