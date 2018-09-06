@@ -1,3 +1,8 @@
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -12,6 +17,11 @@ var app = new Vue({
       { text: 'List item 2' },
       { text: 'List item 3' },
       { text: 'List item 4' }
+    ],
+       itemList: [
+      { id: 0, text: 'Test 1' },
+      { id: 1, text: 'Test 2' },
+      { id: 2, text: 'Test 3' }
     ]
   },
     methods: {
@@ -22,4 +32,9 @@ var app = new Vue({
     
     
 });
+
+
+
+
+
 
