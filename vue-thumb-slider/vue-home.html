@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Vue Play Ground
+    </title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+<body>
+    
+    <div id="app">
+      <div class="gallery">
+        <div class="thumbs-wrapper">
+        <div class="thumbs-inner" :class="'a' + activeItem">
+          <div class="thumb">1</div>
+          <div class="thumb">2</div>
+          <div class="thumb">3</div>
+          <div class="thumb">4</div>
+          <div class="thumb">5</div>
+          <div class="thumb">6</div>
+          <div class="thumb">7</div>
+          <div class="thumb">8</div>
+        </div>
+      </div>
+        <span class="arrow left" @click="previous()"></span>
+        <span class="arrow right" @click="next()"></span>
+      </div>
+    </div>
+
+
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
