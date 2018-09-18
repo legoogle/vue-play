@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Vue Play Ground
+    </title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+<body>
+    
+    <div id="app">
+<div class="main-image">
+    <img :src="images[activeItem]" alt="">
+  </div>
+  <div class="gallery">
+  
+  
+    <div class="thumbs-wrapper">
+    <div class="thumbs-inner" :class="'a' + activeItem">
+      <div class="thumb" v-for="(image, index) in thumbs">
+        <img :src="image" alt="">
+      </div>
+    </div>
+  </div>
+    <span class="arrow left" @click="previous()"></span>
+    <span class="arrow right" @click="next()"></span>
+  </div>
+  
+  <div class="breadcrumbs">
+    <span v-for="i, index in thumbs" @click="selectItem(index)" :class="{'is-active': index == activeItem}"></span>
+  </div>
+</div>
+<script>
+	_gallery = {
+  	images: [
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+			'http://placekitten.com/800/600',
+    ],
+    thumbs: [
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+			'http://placekitten.com/200/150',
+    ]
+  };
+</script>
+
+
+
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
